@@ -253,7 +253,7 @@ static int qcom_cpufreq_hw_read_lut(struct platform_device *pdev,
 				    int domain_index)
 {
 	struct device *dev = &pdev->dev, *cpu_dev;
-	u32 data, src, lval, i, core_count, prev_cc, prev_freq, freq, volt;
+	u32 data, src, lval, i, core_count, prev_cc, prev_freq = 0, freq, volt;
 	unsigned long cpu;
 	int ret, of_len;
 	u32 *of_table = NULL;
